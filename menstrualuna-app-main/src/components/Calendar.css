@@ -1,0 +1,162 @@
+/* Calendar Container */
+.calendar-section {
+  font-family: 'Arial', sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+/* Calendar Header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+/* Navigation Buttons */
+.calendar-controls button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Calendar Grid */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+/* Individual Day */
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Empty Day */
+.calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Current Date */
+.calendar-day.current-date {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Selected Date */
+.calendar-day.selected {
+
+  color: white;
+  border: 2px dotted white;
+}
+
+/* Hover Effect */
+.calendar-day:hover:not(.empty) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Period Dates - Dotted Border */
+.calendar-day.period-date {
+  border: 2px dotted rgba(255, 69, 96, 0.8); /* Red dotted border */
+  color: white;
+}
+
+/* Mark Period Button */
+.mark-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.mark-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.popup input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+/* Popup Button */
+.popup button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(78, 205, 196, 0.8);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: rgba(58, 168, 159, 0.8);
+}

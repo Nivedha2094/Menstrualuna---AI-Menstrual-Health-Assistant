@@ -1,0 +1,126 @@
+/* Navbar container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Link for the logo */
+.logo-link {
+  text-decoration: none;
+}
+
+/* Logo title */
+.logo-title {
+  font-family: 'Poppins', sans-serif;
+  color: #ff00dd;
+  font-size: 1.1.rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+
+}
+
+/* Nav links container (hidden by default) */
+.nav-links {
+  position: fixed;
+  top: -100%; /* Initially hidden above the viewport */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4081;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+  gap: 20px;
+  transition: top 0.3s ease-in-out; /* Slide-in transition from top */
+}
+
+/* Show the nav links when the menu is open */
+.nav-links.show {
+  top: 0; /* Slide menu down */
+}
+
+/* Nav links appearance */
+.nav-links a {
+  display: block; /* Ensure links are displayed as blocks (on separate lines) */
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem; /* Adjusted font size for better readability */
+  margin: 10px 0; /* Adds margin to separate the links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Light yellow hover effect */
+}
+
+/* Hamburger menu (three dots) */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  width: 30px;
+  height: 5px;
+  background-color: #ff7da7;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Rotate and hide bars when the menu is open */
+.menu-bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ffcc00; /* Hover effect on close button */
+}
+
+/* Media query for mobile/tablet screens */
+@media (max-width: 768px) {
+  /* Show the hamburger menu (three dots) */
+  .menu-toggle {
+    display: flex;
+  }
+}

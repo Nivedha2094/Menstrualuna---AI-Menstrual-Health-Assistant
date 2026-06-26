@@ -1,0 +1,121 @@
+/* Popup.css */
+
+/* Overlay for the Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Transparent blur effect */
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out; /* Fade-in animation */
+}
+
+/* Popup content */
+.popup-content {
+  background: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  max-width: 600px;
+  width: 90%;
+  color: white; /* White text for readability */
+  animation: slideIn 0.3s ease-out; /* Slide-in animation */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label and input fields */
+.popup-content label {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.popup-content input[type="date"],
+.popup-content input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #ffffff23;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.popup-content input[type="date"]:focus,
+.popup-content input[type="number"]:focus {
+  outline: none;
+  border: 1px solid #ff4081; /* Highlight the input when focused */
+}
+
+/* Save button */
+.popup-content button {
+  padding: 12px 30px;
+  background-color: #ffffff23; /* Pink background */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #afafaf47; /* Darker pink on hover */
+}
+
+.popup-content button:focus {
+  outline: none;
+}
+
+/* Close button for the popup - Positioned in the top-right corner */
+.popup-close {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: transparent; /* No background */
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for close button */
+.popup-close:hover {
+  color: #ff4081; /* Pink hover effect */
+}
+
+/* Fade-in animation for overlay */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for popup content */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

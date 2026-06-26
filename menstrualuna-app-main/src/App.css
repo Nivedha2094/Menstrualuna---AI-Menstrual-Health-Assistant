@@ -1,0 +1,82 @@
+/* Apply gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg,#ffd3de, #ff7da7); /* Pink to Orange */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Chatbot toggle button */
+.chatbot-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.chatbot-toggle-btn:hover {
+  background-color: #f50057;
+}
+
+.chatbot-toggle-btn:focus {
+  outline: none;
+}
+
+/* General Awareness and Menstrual Product Info buttons container */
+.buttons-container {
+  position:relative;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* Use flexbox to position buttons next to each other */
+  gap: 10px; /* Space between the buttons */
+  z-index: 9998;
+}
+
+/* Individual buttons */
+.general-awareness-btn,
+.menstrual-product-info-btn {
+  padding: 10px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem; /* Smaller text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 120px; /* Fixed width to make them consistent */
+}
+
+.general-awareness-btn:hover,
+.menstrual-product-info-btn:hover {
+  background-color: #f50057;
+}
+
+.general-awareness-btn:focus,
+.menstrual-product-info-btn:focus {
+  outline: none;
+}
+
+/* Additional styling for the buttons */
+.general-awareness-btn {
+  background-color: #ffffff32; /* Slightly different color */
+}
+
+.menstrual-product-info-btn {
+  background-color: #ffffff32; /* Slightly different color */
+}

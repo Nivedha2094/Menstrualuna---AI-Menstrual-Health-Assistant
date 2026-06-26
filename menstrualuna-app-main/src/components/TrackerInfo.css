@@ -1,0 +1,114 @@
+/* TrackerInfo.css */
+
+/* General styles for the tracker info section */
+.tracker-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 30px;  /* Reduced top padding for compact design */
+  background-color: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+  border-radius: 12px;
+ /* Subtle shadow for compactness */
+  color: rgb(253, 0, 228);
+  width: 90%;  /* Slightly smaller width */
+  max-width: 350px;  /* Maximum width reduced for compact view */
+  margin: 10px auto;  /* Centers the section without making it sticky */
+  text-align: center;  /* Text aligned to the center */
+}
+
+/* Title for period info */
+.period-info {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5px;  /* Reduced bottom margin for compactness */
+}
+
+/* Number of days until the next period */
+.period-days {
+  font-size: 1.8rem; /* Slightly smaller font size */
+  font-weight: 700;
+  color: #ff00aa; /* Pink color */
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+/* Chance text */
+.chance {
+  font-size: 0.9rem;
+  color: rgb(34, 34, 34);
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+/* Button to view cycle info */
+.mark-button {
+  background-color: rgba(255, 255, 255, 0.173); /* Slightly transparent white */
+  color: white;
+  padding: 8px 20px;  /* Reduced padding */
+  border: #ffffff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;  /* Makes the button width fit content */
+}
+
+.mark-button:hover {
+  background-color: #afafaf47; /* Darker shade on hover */
+}
+
+.mark-button:focus {
+  outline:auto;
+}
+
+/* Modal related styles */
+.tracker-info .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out; /* Fade-in animation */
+}
+
+.tracker-info .modal-content {
+  background: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  max-width: 350px; /* Reduced max-width */
+  width: 85%;  /* Adjusted width to fit the compact design */
+  color: white;
+  animation: slideIn 0.3s ease-out; /* Slide-in animation */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fade-in animation for overlay */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for modal content */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
